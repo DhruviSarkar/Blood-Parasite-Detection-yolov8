@@ -43,7 +43,7 @@ Make sure you follow the correct YOLO directory structure:
     /train
     /val
 ```
-###Executing Program
+### Executing Program
 1. To train the model:
 ```bash
 yolo task=detect mode=train model=yolov8n.pt data=data.yaml epochs=50 imgsz=640
