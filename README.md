@@ -25,13 +25,13 @@ The goal is to build toward a full pipeline with segmentation and clinical decis
 To install dependencies locally:
 ```bash
 pip install -r requirements.txt
-
+```
 ### Installing
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/blood-parasite-detection-yolov8.git
 cd blood-parasite-detection-yolov8
-
+```
 2. Add your dataset in YOLO format under a data/ directory.
 Make sure you follow the correct YOLO directory structure:
 ```bash
@@ -42,17 +42,17 @@ Make sure you follow the correct YOLO directory structure:
   /labels
     /train
     /val
-
+```
 ###Executing Program
 1. To train the model:
 ```bash
 yolo task=detect mode=train model=yolov8n.pt data=data.yaml epochs=50 imgsz=640
-
+```
 2. To predict on a new image:
 ```bash
 yolo task=detect mode=predict model=runs/detect/train/weights/best.pt source=path_to_image.jpg
-
+```
 3. To evaluate:
 ```bash
 yolo task=detect mode=val model=runs/detect/train/weights/best.pt data=data.yaml
-
+```
